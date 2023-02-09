@@ -54,29 +54,30 @@ const App = () => {
 
   return (
     <div className="container">
-      {columns.map((column, index) => (
-        <div
-          className="column"
-          key={index}
-          onDrop={(event) => onDrop(event, index)}
-          onDragOver={onDragOver}
-        >
+      <div className="column-container">
+        {columns.map((column, index) => (
           <div
-            className="column-header"
-            draggable
-            onDragStart={(event) => onColumnDragStart(event, index)}
+            className="column"
+            key={index}
+            onDrop={(event) => onDrop(event, index)}
+            onDragOver={onDragOver}
           >
-            {column.title}
-            <span
-              className="delete-icon"
-              onClick={() => deleteColumn(index)}
+            <div
+              className="column-header"
+              draggable
+              onDragStart={(event) => onColumnDragStart(event, index)}
             >
-              &#10005;
-            </span>
-          </div>
-          
-          <div className="column-body">
-            {column.childs.map((child, i) => (
+              {column.title}
+              <span
+                className="delete-icon"
+                onClick={() => deleteColumn(index)}
+              >
+                &#10005;
+              </span>
+            </div>
+            <div className="column-body">
+              {column.childs.map((child
+, i) => (
               <div
                 className="item"
                 key={i}
@@ -94,8 +95,10 @@ const App = () => {
         Add Column
       </button>
     </div>
+    </div>
   );
-};
+  };
+
 
 export default App;
 
