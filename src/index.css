@@ -1,51 +1,50 @@
-.draggable {
-  transition: all 0.3s ease-in-out;
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.column-body {
+  padding: 10px;
+  background-color: white;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.add-column {
+  background-color: lightgray;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.column {
+  display: inline-block;
+border: 2px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+  min-width: 200px;
+  height: auto;
+}
+
+.column-container {
+  display: flex;
 }
 
 .dragging {
   opacity: 0.5;
-  cursor: grabbing;
 }
 
-   .delete-icon{
-      border: 2px solid black;
-      border-radius: 20px;
-      cursor: pointer;
-      padding: 8px 8px;
-    }
-
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .column {
-      border: 1px solid #ccc;
-      padding: 10px;
-      width: calc(33.33% - 20px);
-      min-width: 300px;
-    }
-    
-    .column-header {
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .column-body {
-      padding: 10px;
-    }
-    
-    .item {
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #eee;
-      border: 1px solid #ccc;
-      cursor: move;
-    }
-    
-    .add-column {
-      margin-top: 20px;
-    }
-    
